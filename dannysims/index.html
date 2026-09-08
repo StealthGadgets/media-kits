@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Danny Sims · @dannysimsabi — Partnership Media Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest: #141a15;
+    --forest-2: #1c231d;
+    --panel: #202820;
+    --moss: #5b7350;
+    --moss-light: #7c9670;
+    --blaze: #c1571f;
+    --blaze-light: #db7038;
+    --paper: #ece6d6;
+    --paper-dim: #a7a494;
+    --line: rgba(236,230,214,0.14);
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--forest);
+    color:var(--paper);
+    font-family:'Source Sans 3', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  .display{ font-family:'Fjalla One', sans-serif; text-transform:uppercase; }
+  .mono{ font-family:'IBM Plex Mono', monospace; }
+  a{ color:inherit; }
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky; top:0; z-index:30;
+    background:rgba(20,26,21,0.88);
+    backdrop-filter:blur(10px);
+    padding:18px 6vw;
+    display:flex; justify-content:space-between; align-items:center;
+    border-bottom:1px solid var(--line);
+  }
+  .brand{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Fjalla One', sans-serif;
+    font-size:1.25rem;
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+  }
+  .brand .peak{
+    width:0; height:0;
+    border-left:7px solid transparent;
+    border-right:7px solid transparent;
+    border-bottom:11px solid var(--blaze);
+    flex-shrink:0;
+  }
+  nav{ display:flex; gap:26px; align-items:center; }
+  nav a:not(.nav-cta){
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:var(--paper-dim);
+  }
+  nav a:not(.nav-cta):hover{ color:var(--blaze-light); }
+  @media (max-width:760px){ nav a:not(.nav-cta){ display:none; } }
+  .nav-cta{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    background:var(--blaze);
+    color:var(--forest);
+    padding:10px 18px;
+    text-decoration:none;
+    white-space:nowrap;
+  }
+  .nav-cta:hover{ background:var(--blaze-light); }
+
+  /* ---------- hero with topo lines ---------- */
+  .hero{
+    position:relative;
+    padding:90px 6vw 0;
+    overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+  .topo{
+    position:absolute; inset:0;
+    opacity:0.35;
+    pointer-events:none;
+  }
+  .topo svg{ width:100%; height:100%; }
+
+  .hero-inner{ position:relative; z-index:1; max-width:1180px; margin:0 auto; }
+
+  .kit-label{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--blaze-light);
+    border:1px solid var(--blaze);
+    padding:6px 12px;
+    margin-bottom:30px;
+  }
+
+  h1{
+    font-family:'Fjalla One', sans-serif;
+    text-transform:uppercase;
+    font-size:clamp(3rem, 9vw, 6.6rem);
+    line-height:0.9;
+    letter-spacing:0.01em;
+    color:var(--paper);
+  }
+  h1 .handle{
+    display:block;
+    font-family:'IBM Plex Mono', monospace;
+    text-transform:none;
+    font-size:0.26em;
+    color:var(--moss-light);
+    letter-spacing:0.02em;
+    margin-top:16px;
+  }
+
+  .hero-blurb{
+    margin-top:26px;
+    color:var(--paper-dim);
+    font-size:1.1rem;
+    max-width:52ch;
+  }
+
+  .hero-cta-row{
+    margin-top:32px;
+    display:flex; gap:14px; flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'IBM Plex Mono', monospace;
+    text-transform:uppercase;
+    font-size:12.5px;
+    letter-spacing:0.05em;
+    padding:15px 26px;
+    text-decoration:none;
+    border:1.5px solid var(--paper);
+    transition:background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+  .btn-primary{ background:var(--blaze); border-color:var(--blaze); color:var(--forest); }
+  .btn-primary:hover{ background:var(--blaze-light); border-color:var(--blaze-light); }
+  .btn-outline{ background:transparent; color:var(--paper); }
+  .btn-outline:hover{ background:var(--paper); color:var(--forest); }
+
+  /* ---------- elevation profile stat bar ---------- */
+  .elevation{
+    margin-top:64px;
+    position:relative;
+    padding-bottom:0;
+  }
+  .elevation-line{
+    height:90px;
+    width:100%;
+  }
+  .stat-row{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    border-top:1px solid var(--line);
+  }
+  @media (max-width:760px){ .stat-row{ grid-template-columns:repeat(2, 1fr); } }
+  .stat-row div{
+    padding:22px 20px 30px 0;
+  }
+  .stat-row .num{
+    font-family:'Fjalla One', sans-serif;
+    font-size:2.5rem;
+    color:var(--blaze-light);
+    line-height:1;
+  }
+  .stat-row .lbl{
+    margin-top:8px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--paper-dim);
+  }
+  .placeholder-note{
+    padding-bottom:36px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--moss-light);
+  }
+
+  /* ---------- section shell ---------- */
+  section.block{
+    max-width:1180px;
+    margin:0 auto;
+    padding:70px 6vw;
+    border-bottom:1px solid var(--line);
+  }
+  .section-head{
+    display:flex; align-items:flex-end; justify-content:space-between; gap:20px;
+    margin-bottom:44px; flex-wrap:wrap;
+  }
+  .section-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--blaze-light);
+    margin-bottom:10px;
+    display:block;
+  }
+  h2{
+    font-family:'Fjalla One', sans-serif;
+    text-transform:uppercase;
+    font-size:clamp(1.8rem, 3.4vw, 2.6rem);
+    color:var(--paper);
+  }
+  .section-note{ color:var(--paper-dim); font-size:0.96rem; max-width:340px; }
+
+  /* ---------- about ---------- */
+  .about-grid{ display:grid; grid-template-columns:1.15fr 1fr; gap:54px; }
+  @media (max-width:820px){ .about-grid{ grid-template-columns:1fr; } }
+  .about-grid p{ color:var(--paper-dim); font-size:1.04rem; margin-bottom:18px; max-width:58ch; }
+  .about-grid p strong{ color:var(--paper); font-weight:600; }
+
+  .focus-list{ display:flex; flex-direction:column; gap:0; border-top:1px solid var(--line); }
+  .focus-list .row{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:16px 0;
+    border-bottom:1px solid var(--line);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:0.03em;
+    color:var(--paper);
+  }
+  .focus-list .row span.mark{ color:var(--blaze-light); }
+
+  /* ---------- audience bars ---------- */
+  .demo-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    padding:32px;
+  }
+  .demo-card .k{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--paper-dim);
+    margin-bottom:18px;
+  }
+  .bar-row{ margin-bottom:16px; }
+  .bar-row:last-child{ margin-bottom:0; }
+  .bar-row .top{
+    display:flex; justify-content:space-between;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--paper);
+    margin-bottom:6px;
+  }
+  .bar-track{ height:8px; background:var(--forest-2); border:1px solid var(--line); }
+  .bar-fill{ height:100%; background:var(--moss); }
+
+  /* ---------- trail markers (content pillars) ---------- */
+  .trail{
+    position:relative;
+    margin-top:10px;
+    padding-left:26px;
+    border-left:2px dashed var(--line);
+  }
+  .marker{
+    position:relative;
+    padding:0 0 42px 26px;
+  }
+  .marker:last-child{ padding-bottom:0; }
+  .marker::before{
+    content:"";
+    position:absolute; left:-37px; top:2px;
+    width:14px; height:14px;
+    background:var(--blaze);
+    border:3px solid var(--forest);
+    border-radius:50%;
+    box-shadow:0 0 0 1px var(--blaze);
+  }
+  .marker .mi{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--moss-light);
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+  }
+  .marker h3{
+    font-family:'Fjalla One', sans-serif;
+    text-transform:uppercase;
+    font-size:1.4rem;
+    margin-top:6px;
+    color:var(--paper);
+  }
+  .marker p{
+    margin-top:8px;
+    color:var(--paper-dim);
+    max-width:56ch;
+    font-size:0.98rem;
+  }
+
+  /* ---------- partners ---------- */
+  .partner-row{ display:flex; flex-wrap:wrap; gap:14px; margin-top:10px; }
+  .partner-slot{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    border:1px dashed var(--line);
+    color:var(--paper-dim);
+    padding:16px 22px;
+    flex:1;
+    min-width:160px;
+    text-align:center;
+  }
+
+  /* ---------- expedition tiers (packages) ---------- */
+  .package-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:22px;
+  }
+  @media (max-width:820px){ .package-grid{ grid-template-columns:1fr; } }
+  .package{
+    background:var(--panel);
+    border:1px solid var(--line);
+    padding:30px 26px;
+    display:flex; flex-direction:column;
+  }
+  .package.featured{ border:1.5px solid var(--blaze); position:relative; }
+  .package.featured::before{
+    content:"Recommended";
+    position:absolute; top:-12px; left:24px;
+    background:var(--blaze); color:var(--forest);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px; letter-spacing:0.08em; text-transform:uppercase;
+    padding:4px 10px;
+  }
+  .package .elev{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--moss-light);
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+  }
+  .package h3{
+    font-family:'Fjalla One', sans-serif;
+    text-transform:uppercase;
+    font-size:1.6rem;
+    color:var(--paper);
+    margin-top:6px;
+  }
+  .package .desc{ margin-top:8px; color:var(--paper-dim); font-size:0.92rem; }
+  .package ul{ list-style:none; margin-top:18px; display:flex; flex-direction:column; gap:10px; flex:1; }
+  .package ul li{
+    font-size:0.92rem;
+    color:var(--paper);
+    display:flex; gap:10px; align-items:flex-start;
+  }
+  .package ul li::before{ content:"▲"; font-size:9px; color:var(--blaze-light); flex-shrink:0; margin-top:4px; }
+
+  /* ---------- trailhead CTA ---------- */
+  .cta-block{ background:var(--panel); border-bottom:1px solid var(--line); }
+  .cta-inner{
+    max-width:1180px; margin:0 auto;
+    padding:70px 6vw;
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:50px;
+    align-items:center;
+  }
+  @media (max-width:820px){ .cta-inner{ grid-template-columns:1fr; } }
+  .cta-inner .section-tag{ color:var(--blaze-light); }
+  .cta-inner p{ color:var(--paper-dim); margin-top:16px; max-width:46ch; }
+
+  .contact-card{
+    background:var(--forest-2);
+    border:1px solid var(--line);
+    padding:30px;
+  }
+  .contact-card .row{ padding:14px 0; border-bottom:1px solid var(--line); }
+  .contact-card .row:last-child{ border-bottom:none; }
+  .contact-card .k{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--paper-dim);
+    margin-bottom:6px;
+  }
+  .contact-card .v{ font-size:1.05rem; }
+  .contact-card a{ text-decoration:none; border-bottom:1px solid var(--blaze); }
+  .contact-card a:hover{ color:var(--blaze-light); }
+
+  /* ---------- footer ---------- */
+  footer{
+    padding:26px 6vw;
+    max-width:1180px; margin:0 auto;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--paper-dim);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand"><span class="peak"></span>Danny Sims</div>
+  <nav>
+    <a href="#audience">Audience</a>
+    <a href="#content">Content</a>
+    <a href="#packages">Packages</a>
+    <a href="#contact" class="nav-cta">Partner with Danny</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="kit-label">Partnership Media Kit · 2026</div>
+    <h1>Danny Sims<span class="handle">@dannysimsabi</span></h1>
+    <p class="hero-blurb">Tactical and outdoor content built on real terrain — gear that's been rucked, rained on, and run through actual conditions before it ever gets reviewed.</p>
+
+    <div class="hero-cta-row">
+      <a class="btn btn-primary" href="#contact">Start a partnership</a>
+      <a class="btn btn-outline" href="https://www.instagram.com/dannysimsabi/" target="_blank" rel="noopener">View Instagram</a>
+    </div>
+
+    <div class="elevation">
+      <div class="stat-row">
+        <div>
+          <div class="num mono">XX.XK</div>
+          <div class="lbl">Followers</div>
+        </div>
+        <div>
+          <div class="num mono">XX%</div>
+          <div class="lbl">Engagement Rate</div>
+        </div>
+        <div>
+          <div class="num mono">XXXK</div>
+          <div class="lbl">Avg. Reel Views</div>
+        </div>
+        <div>
+          <div class="num mono">XX%</div>
+          <div class="lbl">18–44 Audience</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="about">
+  <div class="section-head">
+    <div>
+      <span class="section-tag">01 / About</span>
+      <h2>Gear tested where it's used</h2>
+    </div>
+  </div>
+
+  <div class="about-grid">
+    <div>
+      <p><strong>Danny Sims (@dannysimsabi)</strong> covers tactical and outdoor gear from the field — backcountry setups, load-bearing equipment, camp systems, and firearms content shot in the environments they're actually built for.</p>
+      <p>The audience shows up for the same reason: they want to know how something performs under real weight, real weather, and real miles — not just how it looks in a flat-lay photo.</p>
+      <p>Partnerships are built around <strong>field-first content</strong> — gear goes out on trail or to the range before it shows up in a post.</p>
+    </div>
+    <div>
+      <div class="k mono" style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--paper-dim); margin-bottom:6px;">Focus Areas</div>
+      <div class="focus-list">
+        <div class="row"><span>Backcountry &amp; Bushcraft</span><span class="mark">▲</span></div>
+        <div class="row"><span>Tactical Loadouts</span><span class="mark">▲</span></div>
+        <div class="row"><span>Camp Systems</span><span class="mark">▲</span></div>
+        <div class="row"><span>Firearms &amp; Range</span><span class="mark">▲</span></div>
+        <div class="row"><span>Gear Durability Testing</span><span class="mark">▲</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="audience">
+  <div class="section-head">
+    <div>
+      <span class="section-tag">02 / Audience</span>
+      <h2>Who's on the trail</h2>
+    </div>
+  </div>
+
+  <div class="demo-card">
+    <div class="k mono">Age Range</div>
+    <div class="bar-row">
+      <div class="top"><span>18–24</span><span>XX%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:24%;"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="top"><span>25–34</span><span>XX%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:38%;"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="top"><span>35–44</span><span>XX%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:26%;"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="top"><span>45+</span><span>XX%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:12%;"></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="content">
+  <div class="section-head">
+    <div>
+      <span class="section-tag">03 / Content Pillars</span>
+      <h2>The route brands can plug into</h2>
+    </div>
+  </div>
+
+  <div class="trail">
+    <div class="marker">
+      <div class="mi mono">Marker 01 · Reels</div>
+      <h3>First Look</h3>
+      <p>Fast, honest first impressions of new gear — what it's for, what it weighs, and where it fits in a loadout.</p>
+    </div>
+    <div class="marker">
+      <div class="mi mono">Marker 02 · Carousel</div>
+      <h3>Loadout Breakdown</h3>
+      <p>Full setups broken down piece by piece — tactical rigs, camp kits, and everyday-carry systems.</p>
+    </div>
+    <div class="marker">
+      <div class="mi mono">Marker 03 · Reels</div>
+      <h3>Field Test</h3>
+      <p>Gear pushed through actual trail miles, weather, and range time — shown in use, not staged.</p>
+    </div>
+    <div class="marker">
+      <div class="mi mono">Marker 04 · Stories</div>
+      <h3>Trail Notes</h3>
+      <p>Behind-the-scenes updates from trips and range days that keep the account feeling lived-in.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="partners">
+  <div class="section-head">
+    <div>
+      <span class="section-tag">04 / Past Partners</span>
+      <h2>Brands worked with</h2>
+    </div>
+  </div>
+
+  <div class="partner-row">
+    <div class="partner-slot">Brand Logo</div>
+    <div class="partner-slot">Brand Logo</div>
+    <div class="partner-slot">Brand Logo</div>
+    <div class="partner-slot">Brand Logo</div>
+  </div>
+</section>
+
+<section class="block" id="packages">
+  <div class="section-head">
+    <div>
+      <span class="section-tag">05 / Packages</span>
+      <h2>Ways to work together</h2>
+    </div>
+  </div>
+
+  <div class="package-grid">
+    <div class="package">
+      <div class="elev mono">Elev. Low</div>
+      <h3>Basecamp</h3>
+      <div class="desc">One-off content built around a single product.</div>
+      <ul>
+        <li>1 Reel or dedicated post</li>
+        <li>Product callout in caption</li>
+        <li>Usage rights negotiable</li>
+      </ul>
+    </div>
+    <div class="package featured">
+      <div class="elev mono">Elev. Mid</div>
+      <h3>Summit Push</h3>
+      <div class="desc">Deeper coverage across formats for a full product story.</div>
+      <ul>
+        <li>1 Reel + 3-part Story series</li>
+        <li>Real field test, real conditions</li>
+        <li>Link in bio for campaign window</li>
+        <li>Performance recap shared after posting</li>
+      </ul>
+    </div>
+    <div class="package">
+      <div class="elev mono">Elev. High</div>
+      <h3>Full Expedition</h3>
+      <div class="desc">A running relationship across multiple product drops.</div>
+      <ul>
+        <li>Monthly content cadence</li>
+        <li>First look at new releases</li>
+        <li>Custom deliverables by campaign</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="cta-block" id="contact">
+  <div class="cta-inner">
+    <div>
+      <span class="section-tag mono">Let's Work Together</span>
+      <h2>Got gear worth the miles?</h2>
+      <p>Send over the details and a good contact — happy to talk through content ideas, timelines, and what fits your brand best.</p>
+    </div>
+    <div class="contact-card">
+      <div class="row">
+        <div class="k">Instagram</div>
+        <div class="v"><a href="https://www.instagram.com/dannysimsabi/" target="_blank" rel="noopener">@dannysimsabi</a></div>
+      </div>
+      <div class="row">
+        <div class="k">Email</div>
+        <div class="v"><a href="mailto:partnerships@example.com">[ add booking email ]</a></div>
+      </div>
+      <div class="row">
+        <div class="k">Response Time</div>
+        <div class="v">1–3 business days</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span>DANNY SIMS · @DANNYSIMSABI</span>
+  <span>PARTNERSHIP MEDIA KIT · 2026</span>
+</footer>
+
+</body>
+</html>

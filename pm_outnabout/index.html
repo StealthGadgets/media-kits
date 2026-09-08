@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PM OutNAbout · @pm_outnabout — Partnership Media Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --dial: #f7f3ea;
+    --dial-2: #ece4d0;
+    --panel: #ffffff;
+    --navy: #1f2b3d;
+    --navy-dark: #141b28;
+    --gold: #b8923f;
+    --gold-dark: #93731f;
+    --ink: #201d18;
+    --ink-soft: #6a6355;
+    --line: rgba(32,29,24,0.14);
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--dial);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  .display{ font-family:'Spectral', serif; font-weight:600; }
+  .mono{ font-family:'Roboto Mono', monospace; }
+  a{ color:inherit; }
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky; top:0; z-index:30;
+    background:rgba(247,243,234,0.92);
+    backdrop-filter:blur(10px);
+    padding:20px 6vw;
+    display:flex; justify-content:space-between; align-items:center;
+    border-bottom:1px solid var(--line);
+  }
+  .brand{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Spectral', serif;
+    font-weight:600;
+    font-size:1.1rem;
+  }
+  .brand .case{
+    width:20px; height:20px;
+    border:1.5px solid var(--navy);
+    border-radius:50%;
+    position:relative;
+    flex-shrink:0;
+  }
+  .brand .case::before{
+    content:"";
+    position:absolute; top:3px; left:50%;
+    width:1px; height:5px;
+    background:var(--gold-dark);
+    transform-origin:bottom;
+    transform:translateX(-50%) rotate(35deg);
+  }
+  nav{ display:flex; gap:26px; align-items:center; }
+  nav a:not(.nav-cta){
+    font-family:'Roboto Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:var(--ink-soft);
+  }
+  nav a:not(.nav-cta):hover{ color:var(--gold-dark); }
+  @media (max-width:760px){ nav a:not(.nav-cta){ display:none; } }
+  .nav-cta{
+    font-family:'Roboto Mono', monospace;
+    font-size:11.5px;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    background:var(--navy);
+    color:var(--dial);
+    padding:10px 18px;
+    text-decoration:none;
+    white-space:nowrap;
+  }
+  .nav-cta:hover{ background:var(--navy-dark); }
+
+  /* ---------- hero with watch dial ---------- */
+  .hero{
+    position:relative;
+    padding:90px 6vw 60px;
+    overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+  .dial-art{
+    position:absolute; right:-6%; top:50%; transform:translateY(-50%);
+    width:560px; height:560px;
+    pointer-events:none;
+    opacity:0.95;
+  }
+  @media (max-width:960px){ .dial-art{ display:none; } }
+  .dial-art svg{ width:100%; height:100%; }
+
+  .hero-inner{ position:relative; z-index:1; max-width:1180px; margin:0 auto; }
+
+  .kit-label{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'Roboto Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--navy);
+    border:1px solid var(--navy);
+    padding:6px 12px;
+    margin-bottom:30px;
+    background:var(--panel);
+  }
+
+  .hero-top{ max-width:620px; }
+
+  h1{
+    font-family:'Spectral', serif;
+    font-weight:600;
+    font-size:clamp(2.5rem, 6vw, 4.2rem);
+    line-height:1.08;
+    letter-spacing:-0.005em;
+    color:var(--ink);
+  }
+  h1 .handle{
+    display:block;
+    font-family:'Roboto Mono', monospace;
+    font-weight:400;
+    font-size:0.32em;
+    color:var(--gold-dark);
+    letter-spacing:0.01em;
+    margin-top:16px;
+  }
+
+  .hero-blurb{
+    margin-top:24px;
+    color:var(--ink-soft);
+    font-size:1.08rem;
+    max-width:48ch;
+  }
+
+  .hero-cta-row{
+    margin-top:32px;
+    display:flex; gap:14px; flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'Roboto Mono', monospace;
+    text-transform:uppercase;
+    font-size:12.5px;
+    letter-spacing:0.05em;
+    padding:15px 26px;
+    text-decoration:none;
+    border:1.5px solid var(--ink);
+    transition:background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+  .btn-primary{ background:var(--navy); border-color:var(--navy); color:#fff; }
+  .btn-primary:hover{ background:var(--navy-dark); border-color:var(--navy-dark); }
+  .btn-outline{ background:transparent; color:var(--ink); }
+  .btn-outline:hover{ background:var(--ink); color:var(--dial); }
+
+  /* ---------- dial spec panel ---------- */
+  .spec-panel{
+    margin-top:60px;
+    background:var(--panel);
+    border:1px solid var(--ink);
+    max-width:820px;
+  }
+  .spec-panel-head{
+    display:flex; justify-content:space-between;
+    padding:12px 22px;
+    border-bottom:1px solid var(--line);
+    font-family:'Roboto Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .stat-row{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+  }
+  @media (max-width:640px){ .stat-row{ grid-template-columns:repeat(2, 1fr); } }
+  .stat-row div{
+    padding:22px;
+    border-right:1px solid var(--line);
+    border-top:1px solid var(--line);
+  }
+  .stat-row div:nth-child(4n){ border-right:none; }
+  .stat-row .num{
+    font-family:'Spectral', serif;
+    font-weight:700;
+    font-size:1.9rem;
+    color:var(--navy);
+    line-height:1;
+  }
+  .stat-row .lbl{
+    margin-top:6px;
+    font-family:'Roboto Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .placeholder-note{
+    margin-top:14px;
+    font-family:'Roboto Mono', monospace;
+    font-size:11px;
+    color:var(--gold-dark);
+  }
+
+  /* ---------- section shell ---------- */
+  section.block{
+    max-width:1180px;
+    margin:0 auto;
+    padding:70px 6vw;
+    border-bottom:1px solid var(--line);
+  }
+  .section-head{
+    display:flex; align-items:flex-end; justify-content:space-between; gap:20px;
+    margin-bottom:44px; flex-wrap:wrap;
+  }
+  .section-tag{
+    font-family:'Roboto Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--gold-dark);
+    margin-bottom:10px;
+    display:block;
+  }
+  h2{
+    font-family:'Spectral', serif;
+    font-weight:600;
+    font-size:clamp(1.7rem, 3vw, 2.3rem);
+    color:var(--ink);
+  }
+  .section-note{ color:var(--ink-soft); font-size:0.96rem; max-width:340px; }
+
+  /* ---------- about ---------- */
+  .about-grid{ display:grid; grid-template-columns:1.15fr 1fr; gap:54px; }
+  @media (max-width:820px){ .about-grid{ grid-template-columns:1fr; } }
+  .about-grid p{ color:var(--ink-soft); font-size:1.04rem; margin-bottom:18px; max-width:58ch; }
+  .about-grid p strong{ color:var(--ink); font-weight:600; }
+
+  .focus-list{ display:flex; flex-direction:column; gap:0; border-top:1px solid var(--ink); }
+  .focus-list .row{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:16px 4px;
+    border-bottom:1px solid var(--line);
+    font-size:0.98rem;
+  }
+  .focus-list .row .n{
+    font-family:'Roboto Mono', monospace;
+    color:var(--gold-dark);
+    margin-right:14px;
+    font-size:12px;
+  }
+
+  /* ---------- audience ---------- */
+  .demo-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    padding:32px;
+  }
+  .demo-card .k{
+    font-family:'Roboto Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:18px;
+  }
+  .bar-row{ margin-bottom:16px; }
+  .bar-row:last-child{ margin-bottom:0; }
+  .bar-row .top{
+    display:flex; justify-content:space-between;
+    font-family:'Roboto Mono', monospace;
+    font-size:12px;
+    color:var(--ink);
+    margin-bottom:6px;
+  }
+  .bar-track{ height:8px; background:var(--dial-2); border:1px solid var(--line); }
+  .bar-fill{ height:100%; background:var(--navy); }
+
+  /* ---------- content pillars ---------- */
+  .pillar-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--ink);
+  }
+  @media (max-width:900px){ .pillar-grid{ grid-template-columns:repeat(2, 1fr); } }
+  @media (max-width:480px){ .pillar-grid{ grid-template-columns:1fr; } }
+  .pillar{
+    background:var(--panel);
+    padding:28px 22px;
+    display:flex; flex-direction:column; gap:12px;
+  }
+  .pillar .marker{
+    width:28px; height:28px;
+    border:1.5px solid var(--navy);
+    border-radius:50%;
+    position:relative;
+  }
+  .pillar .marker::before{
+    content:"";
+    position:absolute; top:4px; left:50%;
+    width:1px; height:8px;
+    background:var(--gold-dark);
+    transform-origin:bottom;
+    transform:translateX(-50%) rotate(40deg);
+  }
+  .pillar h3{
+    font-family:'Spectral', serif;
+    font-weight:600;
+    font-size:1.2rem;
+  }
+  .pillar p{ color:var(--ink-soft); font-size:0.92rem; }
+
+  /* ---------- partners ---------- */
+  .partner-row{ display:flex; flex-wrap:wrap; gap:14px; margin-top:10px; }
+  .partner-slot{
+    font-family:'Roboto Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    border:1px dashed var(--line);
+    color:var(--ink-soft);
+    padding:16px 22px;
+    flex:1;
+    min-width:160px;
+    text-align:center;
+    background:var(--panel);
+  }
+
+  /* ---------- packages: horology terms ---------- */
+  .package-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:22px;
+  }
+  @media (max-width:820px){ .package-grid{ grid-template-columns:1fr; } }
+  .package{
+    background:var(--panel);
+    border:1px solid var(--line);
+    padding:30px 26px;
+    display:flex; flex-direction:column;
+  }
+  .package.featured{ border:1.5px solid var(--gold); position:relative; }
+  .package.featured::before{
+    content:"Most Booked";
+    position:absolute; top:-12px; left:24px;
+    background:var(--gold-dark); color:#fff;
+    font-family:'Roboto Mono', monospace;
+    font-size:10px; letter-spacing:0.08em; text-transform:uppercase;
+    padding:4px 10px;
+  }
+  .package .tag{
+    font-family:'Roboto Mono', monospace;
+    font-size:11px;
+    color:var(--gold-dark);
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+  }
+  .package h3{
+    font-family:'Spectral', serif;
+    font-weight:700;
+    font-size:1.55rem;
+    color:var(--ink);
+    margin-top:6px;
+  }
+  .package .desc{ margin-top:8px; color:var(--ink-soft); font-size:0.92rem; }
+  .package ul{ list-style:none; margin-top:18px; display:flex; flex-direction:column; gap:10px; flex:1; }
+  .package ul li{
+    font-size:0.92rem;
+    color:var(--ink);
+    display:flex; gap:10px; align-items:flex-start;
+  }
+  .package ul li::before{ content:"›"; color:var(--navy); font-weight:700; flex-shrink:0; }
+
+  /* ---------- CTA / contact ---------- */
+  .cta-block{ background:var(--navy); color:var(--dial); }
+  .cta-inner{
+    max-width:1180px; margin:0 auto;
+    padding:70px 6vw;
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:50px;
+    align-items:center;
+  }
+  @media (max-width:820px){ .cta-inner{ grid-template-columns:1fr; } }
+  .cta-inner .section-tag{ color:var(--gold); }
+  .cta-inner h2{ font-family:'Spectral', serif; font-weight:600; color:var(--dial); font-size:clamp(1.7rem, 3vw, 2.3rem); margin-top:6px; }
+  .cta-inner p{ color:rgba(247,243,234,0.72); margin-top:16px; max-width:46ch; }
+
+  .contact-card{
+    background:rgba(247,243,234,0.06);
+    border:1px solid rgba(247,243,234,0.2);
+    padding:30px;
+  }
+  .contact-card .row{ padding:14px 0; border-bottom:1px solid rgba(247,243,234,0.16); }
+  .contact-card .row:last-child{ border-bottom:none; }
+  .contact-card .k{
+    font-family:'Roboto Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:rgba(247,243,234,0.55);
+    margin-bottom:6px;
+  }
+  .contact-card .v{ font-size:1.05rem; }
+  .contact-card a{ text-decoration:none; border-bottom:1px solid var(--gold); }
+  .contact-card a:hover{ color:var(--gold); }
+
+  /* ---------- footer ---------- */
+  footer{
+    padding:26px 6vw;
+    max-width:1180px; margin:0 auto;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+    font-family:'Roboto Mono', monospace;
+    font-size:11px;
+    color:var(--ink-soft);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand"><span class="case"></span>PM OutNAbout</div>
+  <nav>
+    <a href="#audience">Audience</a>
+    <a href="#content">Content</a>
+    <a href="#packages">Packages</a>
+    <a href="#contact" class="nav-cta">Partner Up</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="dial-art" aria-hidden="true">
+    <svg viewBox="0 0 400 400" fill="none">
+      <circle cx="200" cy="200" r="170" stroke="#1f2b3d" stroke-width="1.5"/>
+      <circle cx="200" cy="200" r="150" stroke="#1f2b3d" stroke-width="0.5"/>
+      <line x1="200" y1="40" x2="200" y2="58" stroke="#1f2b3d" stroke-width="2"/>
+      <line x1="200" y1="342" x2="200" y2="360" stroke="#1f2b3d" stroke-width="2"/>
+      <line x1="40" y1="200" x2="58" y2="200" stroke="#1f2b3d" stroke-width="2"/>
+      <line x1="342" y1="200" x2="360" y2="200" stroke="#1f2b3d" stroke-width="2"/>
+      <line x1="290" y1="110" x2="278" y2="122" stroke="#1f2b3d" stroke-width="1.2"/>
+      <line x1="110" y1="110" x2="122" y2="122" stroke="#1f2b3d" stroke-width="1.2"/>
+      <line x1="290" y1="290" x2="278" y2="278" stroke="#1f2b3d" stroke-width="1.2"/>
+      <line x1="110" y1="290" x2="122" y2="278" stroke="#1f2b3d" stroke-width="1.2"/>
+      <circle cx="200" cy="255" r="34" stroke="#b8923f" stroke-width="1"/>
+      <line x1="200" y1="200" x2="150" y2="140" stroke="#1f2b3d" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="200" y1="200" x2="255" y2="230" stroke="#1f2b3d" stroke-width="2" stroke-linecap="round"/>
+      <line x1="200" y1="200" x2="200" y2="120" stroke="#b8923f" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
+      <circle cx="200" cy="200" r="5" fill="#1f2b3d"/>
+    </svg>
+  </div>
+
+  <div class="hero-inner">
+    <div class="kit-label">Partnership Media Kit · 2026</div>
+
+    <div class="hero-top">
+      <h1>PM OutNAbout<span class="handle">@pm_outnabout</span></h1>
+      <p class="hero-blurb">Knives, blades, watches, and the everyday carry gear that rounds out the day — content built around fit, finish, and things worth wearing or carrying twice.</p>
+
+      <div class="hero-cta-row">
+        <a class="btn btn-primary" href="#contact">Start a partnership</a>
+        <a class="btn btn-outline" href="https://www.instagram.com/pm_outnabout/" target="_blank" rel="noopener">View Instagram</a>
+      </div>
+    </div>
+
+    <div class="spec-panel">
+      <div class="spec-panel-head">
+        <span>Reach Specs</span>
+        <span>@pm_outnabout</span>
+      </div>
+      <div class="stat-row">
+        <div>
+          <div class="num mono">XX.XK</div>
+          <div class="lbl">Followers</div>
+        </div>
+        <div>
+          <div class="num mono">XX%</div>
+          <div class="lbl">Engagement Rate</div>
+        </div>
+        <div>
+          <div class="num mono">XXXK</div>
+          <div class="lbl">Avg. Reel Views</div>
+        </div>
+        <div>
+          <div class="num mono">XX%</div>
+          <div class="lbl">18–44 Audience</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="about">
+  <div class="section-head">
+    <div>
+      <span class="section-tag">01 / About</span>
+      <h2>Fit, finish, and follow-through</h2>
+    </div>
+  </div>
+
+  <div class="about-grid">
+    <div>
+      <p><strong>PM OutNAbout (@pm_outnabout)</strong> covers knives, blades, watches, and everyday carry gear with an eye for the details that separate a good piece from a great one — fit, finish, and how something actually holds up day to day.</p>
+      <p>The audience appreciates that range: they're as interested in a well-built pocketknife as they are in a well-built watch, and they trust a recommendation that's been worn and carried, not just photographed.</p>
+      <p>Partnerships are built around <strong>genuine daily wear</strong> — every piece is worn, carried, and used before it's featured.</p>
+    </div>
+    <div>
+      <div class="k mono" style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:6px;">Focus Areas</div>
+      <div class="focus-list">
+        <div class="row"><span><span class="n mono">01</span>Blade Reviews</span></div>
+        <div class="row"><span><span class="n mono">02</span>Watch Spotlights</span></div>
+        <div class="row"><span><span class="n mono">03</span>EDC Loadouts</span></div>
+        <div class="row"><span><span class="n mono">04</span>Style &amp; Function</span></div>
+        <div class="row"><span><span class="n mono">05</span>Daily Carry Setups</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="audience">
+  <div class="section-head">
+    <div>
+      <span class="section-tag">02 / Audience</span>
+      <h2>Who's keeping time</h2>
+    </div>
+  </div>
+
+  <div class="demo-card">
+    <div class="k mono">Age Range</div>
+    <div class="bar-row">
+      <div class="top"><span>18–24</span><span>XX%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:20%;"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="top"><span>25–34</span><span>XX%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:38%;"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="top"><span>35–44</span><span>XX%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:29%;"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="top"><span>45+</span><span>XX%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:13%;"></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="content">
+  <div class="section-head">
+    <div>
+      <span class="section-tag">03 / Content Pillars</span>
+      <h2>What's on the wrist and in the pocket</h2>
+    </div>
+  </div>
+
+  <div class="pillar-grid">
+    <div class="pillar">
+      <div class="marker"></div>
+      <h3>Blade Reviews</h3>
+      <p>Folders and fixed blades reviewed for steel, grind, and everyday feel.</p>
+    </div>
+    <div class="pillar">
+      <div class="marker"></div>
+      <h3>Watch Spotlights</h3>
+      <p>Timepieces covered for build, movement, and how they wear day to day.</p>
+    </div>
+    <div class="pillar">
+      <div class="marker"></div>
+      <h3>EDC Loadouts</h3>
+      <p>Full carry setups — blade, watch, and gear — shown together.</p>
+    </div>
+    <div class="pillar">
+      <div class="marker"></div>
+      <h3>Style &amp; Function</h3>
+      <p>Where good looks and everyday usefulness actually meet.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="partners">
+  <div class="section-head">
+    <div>
+      <span class="section-tag">04 / Past Partners</span>
+      <h2>Brands worked with</h2>
+    </div>
+  </div>
+
+  <div class="partner-row">
+    <div class="partner-slot">Brand Logo</div>
+    <div class="partner-slot">Brand Logo</div>
+    <div class="partner-slot">Brand Logo</div>
+    <div class="partner-slot">Brand Logo</div>
+  </div>
+</section>
+
+<section class="block" id="packages">
+  <div class="section-head">
+    <div>
+      <span class="section-tag">05 / Packages</span>
+      <h2>Ways to work together</h2>
+    </div>
+  </div>
+
+  <div class="package-grid">
+    <div class="package">
+      <div class="tag mono">One-Off</div>
+      <h3>Single Wind</h3>
+      <div class="desc">One-off content built around a single product.</div>
+      <ul>
+        <li>1 Reel or dedicated post</li>
+        <li>Product callout in caption</li>
+        <li>Usage rights negotiable</li>
+      </ul>
+    </div>
+    <div class="package featured">
+      <div class="tag mono">Full Coverage</div>
+      <h3>Full Movement</h3>
+      <div class="desc">Deeper coverage across formats for a complete product story.</div>
+      <ul>
+        <li>1 Reel + 3-part Story series</li>
+        <li>Hands-on wear &amp; carry review</li>
+        <li>Link in bio for campaign window</li>
+        <li>Performance recap shared after posting</li>
+      </ul>
+    </div>
+    <div class="package">
+      <div class="tag mono">Ongoing</div>
+      <h3>Standing Reserve</h3>
+      <div class="desc">A running relationship across multiple product drops.</div>
+      <ul>
+        <li>Monthly content cadence</li>
+        <li>First look at new releases</li>
+        <li>Custom deliverables by campaign</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="cta-block" id="contact">
+  <div class="cta-inner">
+    <div>
+      <span class="section-tag mono">Let's Work Together</span>
+      <h2>Got a piece worth wearing daily?</h2>
+      <p>Send over the details and a good contact — happy to talk through content ideas, timelines, and what fits your brand best.</p>
+    </div>
+    <div class="contact-card">
+      <div class="row">
+        <div class="k">Instagram</div>
+        <div class="v"><a href="https://www.instagram.com/pm_outnabout/" target="_blank" rel="noopener">@pm_outnabout</a></div>
+      </div>
+      <div class="row">
+        <div class="k">Email</div>
+        <div class="v"><a href="mailto:partnerships@example.com">[ add booking email ]</a></div>
+      </div>
+      <div class="row">
+        <div class="k">Response Time</div>
+        <div class="v">1–3 business days</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span>PM OUTNABOUT · @PM_OUTNABOUT</span>
+  <span>PARTNERSHIP MEDIA KIT · 2026</span>
+</footer>
+
+</body>
+</html>
